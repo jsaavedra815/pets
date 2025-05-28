@@ -1,4 +1,6 @@
 package com.pucetec.pets.models.requests
 
-class CreateOwnerRequest {
-}
+data class CreateOwnerRequest(
+    val name: String,
+    val age: Int
+)

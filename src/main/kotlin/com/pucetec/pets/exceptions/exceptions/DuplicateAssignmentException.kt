@@ -1,4 +1,3 @@
 package com.pucetec.pets.exceptions.exceptions
 
-class DuplicateAssignmentException {
-}
+class DuplicateAssignmentException(message: String) : RuntimeException(message)

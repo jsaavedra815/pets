@@ -1,4 +1,7 @@
 package com.pucetec.pets.models.responses
 
-class PetSummaryResponse {
-}
+data class PetSummaryResponse(
+    val id: Long,
+    val name: String,
+    val species: String
+)

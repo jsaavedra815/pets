@@ -1,4 +1,3 @@
 package com.pucetec.pets.exceptions.exceptions
 
-class ResourceNotFoundException {
-}
+class ResourceNotFoundException(message: String) : RuntimeException(message)
