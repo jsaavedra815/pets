@@ -3,10 +3,10 @@ spring:
     name: pets
 
   datasource:
-    url: jdbc:h2:mem:petsdb
-    driver-class-name: org.h2.Driver
-    username: admin
-    password: admin
+    url: jdbc:postgresql://localhost:6969/pets_db
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
 
   h2:
     console:
@@ -16,3 +16,4 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

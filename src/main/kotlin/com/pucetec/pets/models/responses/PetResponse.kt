@@ -8,7 +8,7 @@ data class PetResponse(
     val id: Long,
     val name: String,
     val species: String,
-    @JsonProperty("birth_date") val dateOfBirth: LocalDate,
+    @JsonProperty("birth_date")
     val birthDate: LocalDate,
     val owners: List<OwnerSummaryResponse>
 )

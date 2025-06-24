@@ -25,9 +25,17 @@ class PetService(
     }
 
     fun getPetById(id: Long): PetResponse {
+
         val pet = petRepository.findById(id).orElseThrow {
             ResourceNotFoundException("Pet with ID $id not found")
         }
+
+        val blackList = listOf("Simon", "Joaquin", "Superman")
+
+        if (blackList.contains(pet.name)) {
+            throw ResourceNotFoundException("Pet with ID $id not found")
+        }
+
         return petMapper.toResponse(pet)
     }
 }
